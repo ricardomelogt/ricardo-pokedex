@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from '../main-css/main-style.module.css';
+
 
 export async function getStaticProps(context) {
 
@@ -23,7 +24,6 @@ export async function getStaticProps(context) {
 export default function Home(props) {
 
     const { pokemons } = props;
-    var { pokemons_imgs } = props;
 
     return (
         <div className={styles.main_wrapper}>
@@ -36,8 +36,10 @@ export default function Home(props) {
             <ul className={styles.poke_list}>
                 {pokemons.map((pokemon) => (
                     <li className={styles.poke_list_item} key={pokemon.entry_number}>
-                       <img className={styles.pokeListPic} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+pokemon.entry_number+".png"} alt={"Imagem de um "+pokemon.pokemon_species.name}/>
-                       <span className={styles.pokeListText}>{pokemon.entry_number} - {pokemon.pokemon_species.name}</span>
+                            <a href={'/pokemon/'+pokemon.entry_number} >
+                            <img className={styles.pokeListPic} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+pokemon.entry_number+".png"} alt={"Imagem de um "+pokemon.pokemon_species.name}/>
+                            <span className={styles.pokeListText}>{pokemon.entry_number} - {pokemon.pokemon_species.name}</span>
+                            </a>
                     </li>
                 ))}
             </ul>

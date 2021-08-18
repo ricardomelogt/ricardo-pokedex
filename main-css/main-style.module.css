@@ -35,6 +35,13 @@
     transition: all 0.2s ease-in;
 }
 
+.poke_list_item a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
 .poke_list_item:hover {
     background:#b33939;
     color:white;

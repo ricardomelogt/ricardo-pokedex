@@ -1,0 +1,124 @@
+.poke_info_wrapper {
+    font-family: 'Calibri', sans-serif;
+}
+
+.poke_info_wrapper h2 {
+    text-transform: capitalize;
+}
+
+.poke_stats {
+    max-width: 300px;
+}
+
+.poke_stats div {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.poke_stats div span:first-child {
+    width: 80px;
+}
+
+.poke_stats div span:nth-child(2) {
+    width: 30px;
+}
+
+.poke_stats div .stats_bar {
+    display: inline-block;
+    background: green;
+    height: 8px;
+    min-width: 2px;
+    border-radius:2px;
+}
+
+.poke_type {
+    background-color: #dedede;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    margin-right:10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    display: none;
+}
+
+.type_normal {
+    color: #4e4e4e;
+}
+
+.type_fighting {
+    color: white;
+    background-color: rgb(146, 43, 43);
+}
+
+.type_flying {
+    color: rgb(255, 255, 255);
+    background-color: rgb(147, 172, 201);
+}
+
+.type_poison {
+    color: white;
+    background-color: rgb(163, 60, 184);
+}
+
+.type_ground {
+    color: white;
+    background-color: rgb(196, 134, 76);
+}
+
+.type_rock {
+    color: white;
+    background-color: rgb(141, 102, 71);
+}
+
+.type_bug {
+    color: white;
+    background-color: rgb(128, 145, 37);
+}
+
+.type_ghost {
+    color: white;
+    background-color: rgb(111, 82, 138);
+}
+
+.type_steel {
+    color: white;
+    background-color: rgb(112, 112, 112);
+}
+
+.type_fire {
+    color: white;
+    background-color: rgb(231, 68, 27);
+}
+
+.type_water {
+    color: white;
+    background-color: rgb(14, 111, 221);
+}
+
+.type_grass {
+    color: white;
+    background-color: rgb(22, 163, 40);
+}
+
+.type_electric {
+    color: rgb(58, 58, 58);
+    background-color: rgb(224, 221, 20);
+}
+
+.type_ice {
+    color: white;
+    background-color: rgb(34, 184, 204);
+}
+
+.type_dragon {
+    color: white;
+    background-color: rgb(108, 39, 236);
+}
+
+.type_dark {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
