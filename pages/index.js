@@ -21,15 +21,16 @@ export async function getStaticProps(context) {
     }
   }
 
-export default function Home(props) {
+ const Home = function(props) {
 
     const { pokemons } = props;
+    const maxPokes = 620;
 
     return (
         <div className={styles.main_wrapper}>
             <h1 className={styles.dex_title_main}>PokéDex</h1>
             <p>by: Ricardo Melo</p>
-            <p>github: ricardomelogt</p>
+            <p><a href="https://github.com/ricardomelogt/ricardo-pokedex">Github</a></p>
             <p>API used: <a href="https://pokeapi.co/" >https://pokeapi.co/</a></p>
             <p><strong> work in progress... </strong></p>
 
@@ -46,3 +47,5 @@ export default function Home(props) {
         </div>
     )
 }
+
+export default Home;
