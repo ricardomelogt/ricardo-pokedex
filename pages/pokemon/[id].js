@@ -50,6 +50,12 @@ export default function Pokemon( { pokemon } ) {
                         <span key={typesListItem.ability.name} className={'ability_text '+'is_hidden_' + typesListItem.is_hidden}>{typesListItem.ability.name} </span>
                     ))}
                 </div>
+                <div className="content_box">
+                    <span>Egg groups (falta implementar) : </span>
+                    {pokemon.abilities.map((typesListItem) => (
+                        <span key={typesListItem.ability.name} className={'ability_text '+'is_hidden_' + typesListItem.is_hidden}>{typesListItem.ability.name} </span>
+                    ))}
+                </div>
                 <div className={styles.poke_stats}>
                     <h3>Total stats: <span>{hp_stat + atk_stat + def_stat + spatk_stat + spdef_stat + speed_stat}</span></h3>
                     <div> <span>HP:</span> <span>{hp_stat}</span> <div className={styles.stats_bar} style={{ width: hp_stat / 2 + "px" }}></div> </div>
