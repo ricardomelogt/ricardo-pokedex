@@ -39,13 +39,19 @@ export default function Pokemon( { pokemon } ) {
                 <h2>{pokemon.id}. {pokemon.name}</h2>
                 <img src={pokemon.sprites.front_default} alt={"Imagem de um " + pokemon.name} />
                 <div id="poke_types_wrapper" className={styles.pokemon_types}>
-                    <span>Tipo: </span>
+                    <span>Type: </span>
                     {pokemon.types.map((typesListItem) => (
                         <span key={typesListItem.type.name} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
                     ))}
                 </div>
+                <div className="content_box">
+                    <span>Abilities: </span>
+                    {pokemon.abilities.map((typesListItem) => (
+                        <span key={typesListItem.ability.name} className={'ability_text '+'is_hidden_' + typesListItem.is_hidden}>{typesListItem.ability.name} </span>
+                    ))}
+                </div>
                 <div className={styles.poke_stats}>
-                    <h3>stats: <span>{hp_stat + atk_stat + def_stat + spatk_stat + spdef_stat + speed_stat}</span></h3>
+                    <h3>Total stats: <span>{hp_stat + atk_stat + def_stat + spatk_stat + spdef_stat + speed_stat}</span></h3>
                     <div> <span>HP:</span> <span>{hp_stat}</span> <div className={styles.stats_bar} style={{ width: hp_stat / 2 + "px" }}></div> </div>
                     <div> <span>ATK:</span> <span>{atk_stat}</span> <div className={styles.stats_bar} style={{ width: atk_stat / 2 + "px" }}></div> </div>
                     <div> <span>DEF:</span> <span>{def_stat}</span> <div className={styles.stats_bar} style={{ width: def_stat / 2 + "px" }}></div> </div>
