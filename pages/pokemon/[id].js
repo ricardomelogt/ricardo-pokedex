@@ -8,25 +8,6 @@ var pokeUnicoPaths = [] //{params:{id:'1',}},{params:{id:'2',}},
 export default function Pokemon( { pokemon } ) {
     console.log(pokemon);
 
-    //mostrar os tipos dos pokes:
-    var qtdTypes = pokemon.types.length;
-    var tipo01 = pokemon.types[0].type.name,
-    tipo02;
-
-    function mostrarTipo1() {
-        return (
-        <span className={'type_' + tipo01 + ' poke_type'}>{tipo01}</span>
-        )
-    }
-    function mostrarTipo2() {
-        if (qtdTypes == 2) {
-            tipo02 = pokemon.types[1].type.name;
-            return (
-            <span> / <span className={'type_' + tipo02 + ' poke_type'}> {tipo02}</span></span>
-            )
-        }
-    }
-
     // poke stats:
     var hp_stat = pokemon.stats[0].base_stat,
     atk_stat = pokemon.stats[1].base_stat,
@@ -59,7 +40,9 @@ export default function Pokemon( { pokemon } ) {
                 <img src={pokemon.sprites.front_default} alt={"Imagem de um " + pokemon.name} />
                 <div id="poke_types_wrapper" className={styles.pokemon_types}>
                     <span>Tipo: </span>
-                    {mostrarTipo1()}{mostrarTipo2()}
+                    {pokemon.types.map((typesListItem) => (
+                        <span key={typesListItem.type.name} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
+                    ))}
                 </div>
                 <div className={styles.poke_stats}>
                     <h3>stats: <span>{hp_stat + atk_stat + def_stat + spatk_stat + spdef_stat + speed_stat}</span></h3>
