@@ -52,7 +52,7 @@ export default function Pokemon( { pokemon, pokemonSpecies } ) {
                 <div id="poke_types_wrapper" className={styles.pokemon_types}>
                     <span>Type: </span>
                     {pokemon.types.map((typesListItem) => (
-                        <span key={typesListItem.type.name} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
+                        <span key={typesListItem.slot} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
                     ))}
                 </div>
 
