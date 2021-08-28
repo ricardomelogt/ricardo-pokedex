@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "D:\\code-work\\ricardo-pokedex\\pages\\fetch_json.js";
+var _jsxFileName = "C:\\projetos\\ricardo-pokedex\\pages\\fetch_json.js";
 
 
 const botao = function goFetch() {

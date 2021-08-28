@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css_main_style_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../main-css/main-style.module.css */ "./main-css/main-style.module.css");
 /* harmony import */ var _main_css_main_style_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css_main_style_module_css__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "D:\\code-work\\ricardo-pokedex\\pages\\index.js";
+var _jsxFileName = "C:\\projetos\\ricardo-pokedex\\pages\\index.js";
 
 
 async function getStaticProps(context) {
