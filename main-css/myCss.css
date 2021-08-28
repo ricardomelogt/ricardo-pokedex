@@ -5,6 +5,19 @@
     align-items: center;
     padding: 5px 0;
     flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.content_box h3 {
+    width: 100%;
+}
+
+.top_nav_container {
+    width: 100%;
+}
+
+.poke_info_box {
+flex-grow: 1;
 }
 
 .ability_text.move_box {
@@ -19,10 +32,6 @@
 }
 
 /* poke abilities */
-.ability_text.is_hidden_true {
-    text-decoration: line-through;
-    opacity: 0.5;
-}
 
 .ability_text.is_hidden_true::after {
     content: '(hidden ability)';

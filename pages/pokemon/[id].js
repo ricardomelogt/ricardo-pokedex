@@ -43,31 +43,35 @@ export default function Pokemon( { pokemon, pokemonSpecies } ) {
         <div>
             <div className={styles.poke_info_wrapper}>
 
-                <a href={'/pokemon/'+ pokeNavBack}>anterior</a> | <a href={'/pokemon/'+ pokeNavForward}>próximo</a>
-
-                <h2>{pokemon.id}. {pokemon.name}</h2>
-
-                <img src={pokemon.sprites.front_default} alt={"Imagem de um " + pokemon.name} />
-
-                <div id="poke_types_wrapper" className={styles.pokemon_types}>
-                    <span>Type: </span>
-                    {pokemon.types.map((typesListItem) => (
-                        <span key={typesListItem.slot} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
-                    ))}
+                <div class="top_nav_container">
+                    <a href={'/pokemon/'+ pokeNavBack}>anterior</a> | <a href={'/pokemon/'+ pokeNavForward}>próximo</a>
                 </div>
 
-                <div className="content_box">
-                    <span>Abilities: </span>
-                    {pokemon.abilities.map((typesListItem) => (
-                        <span key={typesListItem.ability.name} className={'ability_text '+'is_hidden_' + typesListItem.is_hidden}>{typesListItem.ability.name} </span>
-                    ))}
-                </div>
+                <div class="poke_info_box">
+                    <h2>{pokemon.id}. {pokemon.name}</h2>
 
-                <div className="content_box">
-                    <span>Egg groups: </span>
-                    {pokemonSpecies.egg_groups.map((egg_group) => (
-                        <span key={egg_group.name} className={'ability_text'}>{egg_group.name} </span>
-                    ))}
+                    <img src={pokemon.sprites.front_default} alt={"Imagem de um " + pokemon.name} />
+
+                    <div id="poke_types_wrapper" className={styles.pokemon_types}>
+                        <span>Type: </span>
+                        {pokemon.types.map((typesListItem) => (
+                            <span key={typesListItem.slot} className={'type_' + typesListItem.type.name + ' poke_type'}>{typesListItem.type.name}</span>
+                        ))}
+                    </div>
+
+                    <div className="content_box">
+                        <span>Abilities: </span>
+                        {pokemon.abilities.map((typesListItem) => (
+                            <span key={typesListItem.ability.name} className={'ability_text '+'is_hidden_' + typesListItem.is_hidden}>{typesListItem.ability.name} </span>
+                        ))}
+                    </div>
+
+                    <div className="content_box">
+                        <span>Egg groups: </span>
+                        {pokemonSpecies.egg_groups.map((egg_group) => (
+                            <span key={egg_group.name} className={'ability_text'}>{egg_group.name} </span>
+                        ))}
+                    </div>
                 </div>
 
                 <div className={styles.poke_stats}>
@@ -80,8 +84,8 @@ export default function Pokemon( { pokemon, pokemonSpecies } ) {
                     <div> <span>SPEED:</span> <span>{speed_stat}</span> <div className={styles.stats_bar} style={{ width: speed_stat / 2 + "px" }}></div> </div>
                 </div>
 
-                <h3>Moves: </h3>
                 <div className="content_box">
+                    <h3>Moves: </h3>
                     {pokemon.moves.map((moveNode) => (
                         <span key={moveNode.move.name} className={'ability_text move_box ' + 'version_group_' + parseInt( moveNode.version_group_details[0].version_group.url[40] +  moveNode.version_group_details[0].version_group.url[41] ) }>{moveNode.move.name} </span>
                     ))}
